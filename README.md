@@ -36,3 +36,33 @@ O código é composto por várias funções que gerenciam o estado do jogo e a i
 - **MoverCF**: Move o peão para as casas finais, se necessário, de acordo com o número tirado no dado.
   ```c
   void MoverCF(cadastro *peao[2][4], int jogador_atual, int peao_escolhido, int dado);
+
+## Fluxo Principal
+
+1. Inicializa o tabuleiro e os peões para ambos os jogadores.
+2. Em um loop contínuo, o jogo pede ao jogador atual para rolar o dado e mover os peões.
+3. Dependendo do resultado do dado, o jogo executa as seguintes ações:
+   - Caso o jogador tire um ou mais seis, ele pode mover seus peões ou tirar peões da base.
+   - Se três seis consecutivos forem rolados, a vez do jogador termina e o jogo é encerrado.
+   - Caso o jogador não tire seis, o peão é movido conforme o número do dado.
+4. Alterna para o próximo jogador após cada rodada.
+
+## Compilação e Execução
+
+Para compilar e executar o código, siga os passos abaixo:
+
+1. **Compilação**:
+   ```bash
+   gcc -o ludo ludo.c
+2. **Execução**:
+   ```bash
+   ./ludo
+
+## Requisitos
+
+- Compilador C (por exemplo, `gcc`)
+- Sistema operacional compatível com a compilação de C
+
+## Contribuições
+
+Contribuições para melhorar o código e adicionar novas funcionalidades são bem-vindas. Para contribuir, por favor, abra um pull request ou entre em contato comigo!
